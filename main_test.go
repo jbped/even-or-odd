@@ -20,16 +20,16 @@ func TestIsEven(t *testing.T) {
 
 func TestInitNumSlice(t *testing.T) {
 	numSlice0 := initNumSlice(0)
-	numSlice10 := initNumSlice(10)
-	assert0 := []int{}
-	assert10 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	numSlice5 := initNumSlice(5)
+	assert0 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	assert5 := []int{1, 2, 3, 4, 5}
 
-	if len(numSlice10) != len(assert10) {
-		t.Errorf("Expected %v, but received %v", assert10, numSlice10)
+	if len(numSlice5) != len(assert5) {
+		t.Errorf("Expected %v, but received %v", assert5, numSlice5)
 	}
 	
-	if reflect.DeepEqual(numSlice10, assert10) != true {
-		t.Errorf("Expected %v, but received %v", assert10, numSlice10)
+	if reflect.DeepEqual(numSlice5, assert5) != true {
+		t.Errorf("Expected %v, but received %v", assert5, numSlice5)
 	}
 
 	if len(numSlice0) != len(assert0) {
