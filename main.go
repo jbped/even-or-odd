@@ -9,7 +9,7 @@ import (
 func main() {
 	var sliceLengthArg string
 	var sliceLength int
-	
+
 	if len(os.Args) > 1 {
 		sliceLengthArg = os.Args[1]
 		s, err := strconv.Atoi(sliceLengthArg)
@@ -18,7 +18,6 @@ func main() {
 		}
 		sliceLength = s
 	}
-
 
 	intSlice := initNumSlice(uint(sliceLength))
 	for _, num := range intSlice {
