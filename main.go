@@ -7,12 +7,10 @@ import (
 )
 
 func main() {
-	var sliceLengthArg string
 	var sliceLength int
 
 	if len(os.Args) > 1 {
-		sliceLengthArg = os.Args[1]
-		s, err := strconv.Atoi(sliceLengthArg)
+		s, err := strconv.Atoi(os.Args[1])
 		if err != nil {
 			panic(err)
 		}
@@ -30,8 +28,7 @@ func main() {
 }
 
 func isEven(num int) bool {
-	remainder := num % 2
-	if remainder == 0 {
+	if num % 2 == 0 {
 		return true
 	} else {
 		return false
